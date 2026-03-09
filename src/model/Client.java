@@ -1,10 +1,13 @@
 package model;
 
+import java.util.ArrayList;
+
 public class Client {
     private Long id;
     private String dni;
     private String name;
     private String surname;
+    private ArrayList<Rental> rental;
 
     public Client(Long id, String dni, String name, String surname) {
         this.id = id;
