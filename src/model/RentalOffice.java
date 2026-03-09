@@ -7,15 +7,15 @@ public class RentalOffice {
     private Long id;
     private String address;
     private Integer feeForDelivery;
-    private ArrayList<Car> car;
-    private ArrayList<Rental> rental;
+    private ArrayList<Car> cars;
+    private ArrayList<Rental> rentals;
 
-    public RentalOffice(Long id, String address, Integer feeForDelivery, ArrayList<Car> car, ArrayList<Rental> rental) {
+    public RentalOffice(Long id, String address, Integer feeForDelivery) {
         this.id = id;
         this.address = address;
         this.feeForDelivery = feeForDelivery;
-        this.car = car;
-        this.rental = rental;
+        this.cars = new ArrayList<>();
+        this.rentals = new ArrayList<>();
     }
 
     public Long getId() {
@@ -42,19 +42,19 @@ public class RentalOffice {
         this.feeForDelivery = feeForDelivery;
     }
 
-    public ArrayList<Car> getCar() {
-        return car;
+    public ArrayList<Car> getCars() {
+        return cars;
     }
 
-    public void setCar(ArrayList<Car> car) {
-        this.car = car;
+    public void addCar(Car car) {
+        this.cars.add(car);
     }
 
-    public ArrayList<Rental> getRental() {
-        return rental;
+    public ArrayList<Rental> getRentals() {
+        return rentals;
     }
 
-    public void setRental(ArrayList<Rental> rental) {
-        this.rental = rental;
+    public void setRental(Rental rental) {
+        this.rentals.add(rental);
     }
 }

@@ -7,13 +7,13 @@ public class Model {
     private Long id;
     private String name;
     private Integer pricePerDay;
-    private ArrayList<Car> car;
+    private ArrayList<Car> cars;
 
-    public Model(Long id, String name, Integer pricePerDay, ArrayList<Car> car) {
+    public Model(Long id, String name, Integer pricePerDay) {
         this.id = id;
         this.name = name;
         this.pricePerDay = pricePerDay;
-        this.car = car;
+        this.cars = new ArrayList<>();
     }
 
     public Long getId() {
@@ -40,11 +40,11 @@ public class Model {
         this.pricePerDay = pricePerDay;
     }
 
-    public ArrayList<Car> getCar() {
-        return car;
+    public ArrayList<Car> getCars() {
+        return cars;
     }
 
-    public void setCar(ArrayList<Car> car) {
-        this.car = car;
+    public void addCar(Car car) {
+        this.cars.add(car);
     }
 }

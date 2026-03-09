@@ -16,7 +16,9 @@ public class Dialog {
     private Scanner scanner;
     public Dialog() {
         clientController = new ClientController();
+        addInitialClients();
         carController = new CarController();
+
     }
 
 
