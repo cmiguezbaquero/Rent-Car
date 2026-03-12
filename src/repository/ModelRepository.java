@@ -20,7 +20,12 @@ public class ModelRepository implements IModelRepository{
         return modelRepository;
     }
 
-    public void add ( Model model){
+    @Override
+    public Model findByName(String name) {
+        return null;
+    }
+
+    public void add (Model model){
         model.setId(nextIdAvailable());
         model.add(model);
     }
